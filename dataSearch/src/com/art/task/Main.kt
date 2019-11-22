@@ -36,6 +36,11 @@ fun searchingTagOrUser(ref: SuggestionController<ParentOfUserAndTag>, userInput:
     var input = userInput.removeRange(0,1) // this line removes # and @ characters
     val searchedResult: MutableList<String> = ref.search(input)
     println("Result: $searchedResult\n")
+    
+    if(searchedResult.isEmpty()) {
+        println("Nothing is found")
+        return
+    }
 
     println("Type item that you interested in")
     input = notNullInput()
