@@ -14,8 +14,8 @@ fun menu()
 {
     val userSuggestionController: SuggestionController<ParentOfUserAndTag> = UserSuggestionController(userList)
     val tagSuggestionController: SuggestionController<ParentOfUserAndTag> = TagSuggestionController(tagList)
+    descriptionOfMenu()
     do {
-        descriptionOfMenu()
 
         val input = inputWithAsperandOrOctothorpe()
         when {
